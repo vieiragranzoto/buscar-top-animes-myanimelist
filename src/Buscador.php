@@ -1,6 +1,6 @@
 <?php
 
-namespace Renan\PhpComposer;
+namespace Anime\topAnime;
 
 use GuzzleHttp\ClientInterface;
 use Symfony\Component\DomCrawler\Crawler;
@@ -28,7 +28,7 @@ class Buscador
         $html = $resposta->getBody();
         $this->crawler->addHtmlContent($html);
 
-        $anime = $this->crawler->filter('#anime_favorites .btn-fav span.title');
+        $anime = $this->crawler->filter('.anime_ranking_h3');
         $listaAnimes = [];
         foreach ($anime as $elemento) {
             $listaAnimes[] = $elemento->textContent;

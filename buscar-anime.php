@@ -1,13 +1,9 @@
 <?php
 
 require 'vendor/autoload.php';
-/*
-Teste::metodo();
-Teste2::metodo2();
-exit();
-*/
+
 use GuzzleHttp\Client;
-use Renan\PhpComposer\Buscador;
+use Anime\topAnime\Buscador;
 use Symfony\Component\DomCrawler\Crawler;
 
 $client = new Client(['verify' => false]);
@@ -16,11 +12,10 @@ $crawler =  new Crawler();
 
 $buscador= new Buscador($client, $crawler);
 
-$animes=$buscador->buscar('https://myanimelist.net/profile/vgranzs');
+$animes=$buscador->buscar('https://myanimelist.net/topanime.php');
 
 $i=1;
 foreach ($animes as $anime){
-
-    echo exibeMensagem($i.' - '. $anime);
+    echo $i.' - '. $anime.PHP_EOL;
     $i++;
 }
