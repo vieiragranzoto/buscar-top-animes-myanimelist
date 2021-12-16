@@ -43,7 +43,7 @@
             "@emtrar-pasta",
             "@limpar-cache"
         ],
-        "listar-anime": "php buscador-de-curso.php",
+        "listar-anime": "php buscar-anime.php",
         "pre-update-cmd": [
             "@check"
         ]
