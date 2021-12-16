@@ -1,5 +1,5 @@
 {
-    "name": "anime/buscar-anime",
+    "name": "anime/buscador",
     "description": "Buscar animes Myanimelist",
     "type": "library",
     "autoload": {
